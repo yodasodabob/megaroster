@@ -2,12 +2,15 @@
     const nameForm = document.querySelector('form')
 
     const handleSubmit = (ev) => {
+        debugger
         ev.preventDefault()
         const form = ev.target
-        const rosterList = document.querySelector('rosterList')
+        const rosterList = document.querySelector('.rosterList')
     }
 
-})
+
+    nameForm.addEventListener('submit', handleSubmit)
+})()
 
 
 
