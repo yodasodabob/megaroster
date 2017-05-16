@@ -2,24 +2,25 @@
     const nameForm = document.querySelector('form')
 
 
-    // const buildLiButtons = () => {
-    //     const buttonField = document.createElement('div')
-    //     const delbutton = document.createElement('button')
-    //     buttonField.style.display = 'inline-block'
-    //     buttonField.textContent = 'Delete'
-    //     delbutton.addEventListener('click', (ev) => {
-    //         let button = ev.target
-    //         console.log(this)
-    //     })
-    //     buttonField.appendChild(delbutton)
-    //     return buttonField
-    //     }
+    const buildLiButtons = () => {
+        const buttonField = document.createElement('div')
+        const delbutton = document.createElement('button')
+        buttonField.style.display = 'inline-block'
+        buttonField.style.backgroundColor = '#ff3300'
+        delbutton.textContent = 'Delete'
+        delbutton.addEventListener('click', (ev) => {
+            let button = ev.target
+            console.log(button.parentNode.parentNode)
+            button.parentNode.parentNode.remove()
+        })
+        buttonField.appendChild(delbutton)
+        return buttonField
+        }
 
     const buildListItem = (name) => {
         const li = document.createElement('li')
-        debugger
-        li.textContent = name
-        // li.appendChild(buildLiButtons())
+        li.textContent = name + '  '
+        li.appendChild(buildLiButtons())
         return li
     }
 
