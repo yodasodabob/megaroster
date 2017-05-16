@@ -3,16 +3,23 @@
 
 
     // const buildLiButtons = () => {
+    //     const buttonField = document.createElement('div')
     //     const delbutton = document.createElement('button')
-    //     delbutton.onclick = () => {
-
+    //     buttonField.style.display = 'inline-block'
+    //     buttonField.textContent = 'Delete'
+    //     delbutton.addEventListener('click', (ev) => {
+    //         let button = ev.target
+    //         console.log(this)
+    //     })
+    //     buttonField.appendChild(delbutton)
+    //     return buttonField
     //     }
-    // }
 
     const buildListItem = (name) => {
         const li = document.createElement('li')
+        debugger
         li.textContent = name
-
+        // li.appendChild(buildLiButtons())
         return li
     }
 
@@ -20,9 +27,8 @@
         ev.preventDefault()
         const form = ev.target
         const rosterList = document.querySelector('.rosterList')
-        console.log(rosterList)
         const name = form.name.value
-        rosterList.appendChild(buildListItem(name))
+        rosterList.insertBefore(buildListItem(name), rosterList.childNodes[0])
     }
     
     
@@ -34,3 +40,5 @@
 
 
 // for list buttons use .onclick to reference a function within this file
+// include list buttons in a div and display inline
+// add event listener to the buttons rather than .onclick
