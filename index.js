@@ -7,7 +7,6 @@
         delbutton.textContent = 'Delete'
         delbutton.addEventListener('click', (ev) => {
             let button = ev.target
-            console.log(button.parentNode.parentNode)
             button.parentNode.parentNode.remove()
         })
         return delbutton
