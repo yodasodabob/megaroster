@@ -25,15 +25,9 @@
 
     const buildLiButtons = () => {
         const buttonField = document.createElement('div')
-        // const delbutton = document.createElement('button')
+        
         buttonField.style.display = 'inline-block'
-        // delbutton.style.backgroundColor = '#ff3300'
-        // delbutton.textContent = 'Delete'
-        // delbutton.addEventListener('click', (ev) => {
-        //     let button = ev.target
-        //     console.log(button.parentNode.parentNode)
-        //     button.parentNode.parentNode.remove()
-        // })
+       
         buttonField.appendChild(buildDelButton())
         buttonField.appendChild(buildPromoteButton())
         return buttonField
@@ -62,6 +56,3 @@
 
 
 
-// for list buttons use .onclick to reference a function within this file
-// include list buttons in a div and display inline
-// add event listener to the buttons rather than .onclick
